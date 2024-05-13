@@ -19,7 +19,6 @@ export async function createUser(prevState: any, formData: FormData) {
           errors: validatedFields.error.flatten().fieldErrors,
         }
       }
-      console.log('User created')
   return {
     message: 'Please enter a valid email',
   }

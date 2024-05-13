@@ -1,5 +1,5 @@
 //@/app/ui/signup.tsx   
-"use client"
+'use client'
 
 import { useActionState } from 'react'
 import { createUser } from '@/app/actions'
