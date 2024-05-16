@@ -1,15 +1,16 @@
 //@/app/ui/signup.tsx   
 'use client'
 
-import { useActionState } from 'react'
-import { createUser } from '@/app/actions'
+
+import { createUser} from '@/app/actions'
+import { useFormStatus, useFormState } from 'react-dom'
 
 const initialState = {
   message: '',
 }
 
-export function Signup() {
-  const [state, formAction] = useActionState(createUser, initialState)
+export default function signup() {
+  const [state, formAction] = useFormState(createUser, initialState)
 
   return (
     <form action={formAction}>
@@ -24,4 +25,3 @@ export function Signup() {
   )
 }
 
-export default Signup
